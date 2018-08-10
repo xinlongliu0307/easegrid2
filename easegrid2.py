@@ -1,13 +1,8 @@
 #! /usr/bin/python
-'''
-Author 
-~~~~~~
-n.c.steiner, 2013
-modified by: kat jensen, 2016
+##############################################
+# Requires: py-yaml, numpy, pyproj
+##############################################
 
-Requires: py-yaml, numpy, pyproj
-
-'''
 import os
 import sys
 from collections import namedtuple
@@ -22,7 +17,7 @@ class _Grid(object):
     Keywords:
     grid_name -- Subgrid name (e.g. g09, g03) 
 
-    ''' 
+    '''
     _src_path = os.path.split(os.path.abspath(__file__))[0]
     _dat_path = os.path.join(_src_path, 'dat')
     _constant = yaml.load(open(os.path.join(_src_path, 'grids.yaml'), 'r').read())
