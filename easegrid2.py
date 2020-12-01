@@ -35,8 +35,6 @@
 # Requires: py-yaml, numpy, pyproj
 #########################################################################################################
 
-__author__ = 'kat jensen'
-
 import os
 import sys
 from collections import namedtuple
