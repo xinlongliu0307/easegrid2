@@ -51,7 +51,7 @@ class _Grid(object):
     """
     _src_path = os.path.split(os.path.abspath(__file__))[0]
     _dat_path = os.path.join(_src_path, 'dat')
-    _constant = yaml.load(open(os.path.join(_src_path, 'grids.yaml'), 'r').read())
+    _constant = yaml.load(open(os.path.join(_src_path, 'grids.yaml'), 'r').read(), Loader=yaml.SafeLoader)
     coord_scale = 1e-05
 
     def __init__(self, grid_name):
